@@ -380,7 +380,7 @@ def gen_stmt_loop(ctx):
     loop_ctx = ctx.copy()
     t = gen_type_integer()
     i = loop_ctx.gen_var(loop_counter = True)
-    end = randrange(1, 5000)
+    end = randrange(1, 127)
     return (
         f'for({t} {i} = 0; {i} < {end}; ++{i}) {{\n'
         f'{gen_block(loop_ctx)}'
